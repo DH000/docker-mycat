@@ -1,7 +1,4 @@
-# 外网
-# FROM registry.cn-hangzhou.aliyuncs.com/dthan/debian-wget:1.6
-# 内网
-FROM registry-internal.cn-hangzhou.aliyuncs.com/dthan/debian-wget:1.6
+FROM registry.cn-hangzhou.aliyuncs.com/dthan/debian-wget:1.6
 
 # install jre
 RUN cd /usr/local && wget --no-cookies --no-check-certificate --header "Cookie:gpw_e24=http%3a%2f%2fwww.oracle.com%2ftechnetwork%2fjava%2fjavase%2fdownloads%2fjdk7-downloads-1880260.html;oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u152-b16/aa0333dd3019491ca4f6ddbe78cdb6d0/server-jre-8u152-linux-x64.tar.gz && tar -zxvf server-jre-8u152-linux-x64.tar.gz && rm -f server-jre-8u152-linux-x64.tar.gz
